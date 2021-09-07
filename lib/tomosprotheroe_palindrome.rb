@@ -2,8 +2,6 @@ require "tomosprotheroe_palindrome/version"
 
 module TomosprotheroePalindrome
 
-  VERSION = "0.2.0"
-
   # Returns true for a palindrome, false otherwise.
   def palindrome?
     processed_content == processed_content.reverse
