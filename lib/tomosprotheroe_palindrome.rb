@@ -1,8 +1,8 @@
-# frozen_string_literal: true
+require "tomosprotheroe_palindrome/version"
 
-require_relative "tomosprotheroe_palindrome/version"
+module TomosprotheroePalindrome
 
-class String
+  VERSION = "0.2.0"
 
   # Returns true for a palindrome, false otherwise.
   def palindrome?
@@ -13,6 +13,14 @@ class String
 
     # Returns content for palindrome testing.
     def processed_content
-      scan(/[a-zA-Z]/i).join.downcase
+      scan(/[a-z0-9]/i).join.downcase
     end
+end
+
+class String
+  include TomosprotheroePalindrome
+end
+
+class Integer 
+  include TomosprotheroePalindrome
 end
